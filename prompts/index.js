@@ -142,7 +142,7 @@ const updateEmployee = async () => {
 
   const [roles] = await db.findRoles();
   const roleAnsw = await roles.map((role) => {
-    return { name: role.title, value: role.role_id };
+    return { name: role.position, value: role.role_id };
   });
 
   const answers = await inquirer.prompt([
